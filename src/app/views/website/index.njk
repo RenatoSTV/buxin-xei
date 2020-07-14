@@ -1,0 +1,109 @@
+{% extends 'layout.njk' %}
+
+{% block aside %}
+    <div class="indexAside">
+        <ul>
+            <li>
+                <p>Pizzaria</p>
+                <span hidden="true">
+                    <img src="assets/pizza.svg" alt="pizzaria">
+                </span>
+            </li>
+            <li>
+                <p>Restaurante
+                </p>
+                <span hidden="true">
+                    <img src="assets/restaurant.svg" alt="restaurante">
+                </span>
+            </li>
+            <li>
+                <p>Sorveteria / Açaiteria</p>
+                <span hidden="true">
+                    <img src="assets/ice-cream.svg" alt="sorveteria">
+                </span>
+            </li>
+            <li>
+                <p>Churrascaria</p>
+                <span hidden="true">
+                    <img src="assets/barbecue.svg" alt="churrascaria">
+                </span>
+            </li>
+            <li>
+                <p>Bar</p>
+                <span hidden="true">
+                    <img src="assets/drinks.svg" alt="bar">
+                </span>
+            </li>
+        </ul>
+    </div>
+{% endblock aside %}
+
+{% block main %}
+    <div class="indexMain">
+        <div class="search">
+            <input type="text" name="" id="">
+            <button class="searchBtn">
+                <img src="assets/search.svg" alt="">
+            </button>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="img">
+                        <img src="assets\labellapizza.jpg" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>La Bella Pizza</h2>
+                        <p>Pizzaria</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>Nome</h2>
+                        <p>Tipo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>Nome</h2>
+                        <p>Tipo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>Nome</h2>
+                        <p>Tipo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>Nome</h2>
+                        <p>Tipo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="infos">
+                        <h2>Nome</h2>
+                        <p>Tipo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}

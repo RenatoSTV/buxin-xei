@@ -1,124 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
+
+textarea:focus, input:focus, select:focus, button:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
 
 body {
-  height: 100%;
-  background-color: #ff7869;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
+  background-color: #f2e5d5;
+  font-family: "Open Sans", sans-serif;
+  min-height: 300px;
 }
 
+.container {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "header header" "aside main";
+  margin: 50px auto;
+}
 .header {
+  grid-area: header;
   width: 100%;
-  height: 80px;
-  background-color: #80190e;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.header a {
+.header .home a {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.header .home p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111111;
+  text-align: center;
+}
+
+.header a img {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  justify-self: center;
+}
+
+.header .links a {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
+  transition: 300ms;
 
-  color: #ff331b;
+  color: #111111;
 }
-.search {
-  width: 600px;
-  height: 70px;
+
+.header .links a {
+  margin-left: 20px;
+}
+
+.header .links a:hover {
+  color: #f26363;
+}
+
+.header .login button {
+  background-color: #26a677;
+  font-size: 16px;
+  width: 150px;
+  height: 30px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+}
+
+.header .login button:hover {
+  background-color: #16e79b;
+  cursor: pointer;
+}
+
+aside {
+  grid-area: aside;
+  margin: 0;
   margin-top: 50px;
 }
 
-.search .field {
+main {
+  grid-area: main;
+  width: 100%;
+  min-height: 200px;
+  margin-top: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F26363;
+}
+
+footer p{
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+/* == INDEX== */
+
+.indexAside ul {
+  list-style: none;
+}
+
+.indexAside ul li {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 400ms;
+}
+
+.indexAside ul li.active {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #F2B05E;
+  cursor: pointer;
+  border: 1px solid #26A677;
+  color: #26a677;
+}
+
+.indexAside ul li span img {
+  width: 50px;
+}
+
+.indexMain .search {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.search input {
-  width: 400px;
-  height: 70px;
-  background-color: #f0f0f5;
+.indexMain .search input{
+  width: 350px;
+  height: 40px;
+  border: 2px solid #26A677;
+  border-right: 0;
+  border-radius: 6px 0 0 6px;
+  font-size: 20px;
   padding: 5px;
-
-  border-radius: 8px 0 0 8px;
-  border: 0;
-
-  font-size: 36px;
-  color: #200c0c;
+  color: #593232;
 }
 
-.search button {
-  height: 70px;
-  background-color: #b82f2f;
-
-  border: 0;
-  border-radius: 0 8px 8px 0;
-  padding: 20px;
-
-  transition: 300ms;
+.indexMain .search .searchBtn{
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 2px solid #26A677;
+  border-radius: 0 6px 6px 0;
 }
 
-.search button img {
-  width: 50px;
-  align-items: center;
+.indexMain .search .searchBtn:hover{
+
+  background-color: #76ff9f;
 }
 
-.search button:hover {
-  background-color: #80190e;
+.indexMain .search button img{
+  width: 20px;
+  color: #ffffff;
 }
+
+.indexMain .content{
+}
+
+/* == Cards == */
 
 .cards {
   width: 940px;
   min-height: 300px;
-  background-color: #80190e;
-  margin: 0 auto;
-  margin-top: 100px;
+  background-color: #f2636375;
+  margin: 50px auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 24px;
+  border-radius: 20px;
 }
 .cards .card {
   width: 200px;
-  height: 300px;
-  background-color: white;
+  height: 230px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-
   justify-self: center;
 }
 
-.cards .fundo{
-  background-color: #ff7869;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card .img{
+.card .img {
+  width: 150px;
+  height: 150px;
   align-self: center;
-  border: 1px solid #200c0c;
+  border-radius: 50%;
+  border: 5px solid #248b6c;
 }
 
-.card img{
+.card img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+}
+.card .infos{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 20px;
 }
 
 
-.form{
+.card .infos h2{
+  width: 150px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+
+.card .infos p{
+  width: 100px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+
+/* == Formulário == */
+
+.form {
   width: 940px;
   min-height: 300px;
   background-color: #80190e;
@@ -132,55 +268,29 @@ body {
   padding: 50px;
 }
 
-.form .content{
+.form .content {
   width: 500px;
   margin: auto;
 }
 
-.form .content .item{
+.form .content .item {
   margin: 20px;
 }
 
-.item label{
+.item label {
   font-size: 18px;
   color: #361d1a;
-  
 }
 
-.item input{
+.item input {
   width: 200px;
   height: 30px;
 }
 
-.form button{
+.form button {
   width: 200px;
   height: 60px;
   background-color: #ff331b;
   font-size: 24px;
   margin-top: 50px;
 }
-
-
-
-
-
-.footer {
-  height: 62px;
-
-  background-color: #200c0c;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 100px;
-}
-
-.footer p {
-  font-size: 14px;
-  color: #999999;
-
-  margin: 23px auto;
-}
-
-

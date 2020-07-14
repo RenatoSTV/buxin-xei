@@ -9,16 +9,33 @@
         <title>Buxin Xei</title>
     </head>
     <body>
-        <header class="header">
-            <a href="/restaurantes">Restaurantes</a>
-            <a href="/cadastrar">Cadastro</a>
-            <a href="#">Fale conosco</a>
-        </header>
-
-        {% block content %}{% endblock content %}
-
-        <footer class="footer">
+        <div class="container">
+            <header class="header">
+                <div class="home">
+                    <a href="/">
+                        <img src="/assets/pizza.svg" alt="buxinxei">
+                        <p>Buxin<br>Xei</p>
+                    </a>
+                </div>
+                <div class="links">
+                    <a href="/restaurantes">Restaurantes</a>
+                    <a href="/cadastrar">Cadastro</a>
+                    <a href="#">Fale conosco</a>
+                </div>
+                <div class="login">
+                    <button>Login</button>
+                </div>
+            </header>
+            <aside>
+                {% block aside %}{% endblock aside %}
+            </aside>
+            <main>
+                {% block main %}{% endblock main %}
+            </main>
+        </div>
+        <footer>
             <p>Todos os direitos reservados</p>
         </footer>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

@@ -28,15 +28,15 @@ nunjucks.configure("src/app/views",{
 //req: Requisição
 //res: Resposta
 server.get("/", (req, res) => {
-    return res.render("index")
+    return res.render("website/index")
 })
 
 server.get("/restaurantes", (req, res) => {
-    return res.render("restaurants")
+    return res.render("website/restaurants")
 })
 
 server.get("/cadastrar", (req, res) => {
-    return res.render("register")
+    return res.render("website/register")
 })
 
 server.listen(5100, function () {
