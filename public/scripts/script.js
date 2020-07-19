@@ -1,12 +1,3 @@
-// const options = document.querySelectorAll('li')
-
-// for( option of options){
-//     option.addEventListener("mouseover", function(){
-//         const 
-//         option.getElementsByTagName('span').removeAttribute('hidden', true)
-//     })
-// }
-
 const spans = document.querySelectorAll('span');
 const options = document.querySelectorAll('li');
 

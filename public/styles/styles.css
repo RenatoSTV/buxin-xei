@@ -6,6 +6,9 @@
   border: 0;
   box-sizing: border-box;
   text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 textarea:focus, input:focus, select:focus, button:focus {
@@ -57,19 +60,16 @@ body {
 }
 
 .header .links a {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 36px;
   text-decoration: none;
   transition: 300ms;
-
+  
   color: #111111;
-}
-
-.header .links a {
   margin-left: 20px;
 }
 
 .header .links a:hover {
+  font-weight: bold;
   color: #f26363;
 }
 
@@ -82,6 +82,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
 }
 
 .header .login button:hover {
@@ -132,6 +133,7 @@ footer p{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: bold;
   transition: 400ms;
 }
 
@@ -142,11 +144,15 @@ footer p{
   background-color: #F2B05E;
   cursor: pointer;
   border: 1px solid #26A677;
-  color: #26a677;
+  color: #ffffff;
 }
 
 .indexAside ul li span img {
   width: 50px;
+}
+
+.indexMain{
+  margin-top: 50px;
 }
 
 .indexMain .search {
@@ -156,19 +162,23 @@ footer p{
 }
 
 .indexMain .search input{
-  width: 350px;
-  height: 40px;
+  width: 100%;
+  height: 60px;
+  margin-left: 30px;
   border: 2px solid #26A677;
   border-right: 0;
   border-radius: 6px 0 0 6px;
-  font-size: 20px;
-  padding: 5px;
+  font-size: 24px;
+  padding: 10px;
   color: #593232;
+  transition: 500ms;
 }
 
+
 .indexMain .search .searchBtn{
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
   background-color: #ffffff;
   border: 2px solid #26A677;
   border-radius: 0 6px 6px 0;
@@ -184,8 +194,6 @@ footer p{
   color: #ffffff;
 }
 
-.indexMain .content{
-}
 
 /* == Cards == */
 
@@ -254,43 +262,79 @@ footer p{
 
 /* == Formulário == */
 
-.form {
-  width: 940px;
-  min-height: 300px;
-  background-color: #80190e;
+.registerMain{
+  width: 700px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  background-color:#f110101c;
+  margin-top: 50px;
+}
+
+legend{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  margin: 0 auto;
-  margin-top: 100px;
-  padding: 50px;
 }
 
-.form .content {
-  width: 500px;
-  margin: auto;
+fieldset {
+  margin-top: 30px;
+}
+.field-group{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px auto;
 }
 
-.form .content .item {
-  margin: 20px;
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 16px;
 }
 
-.item label {
+.field label {
   font-size: 18px;
   color: #361d1a;
 }
 
-.item input {
-  width: 200px;
+.field input {
+  width: 100%;
   height: 30px;
+  padding: 5px;
+  background-color: #fdfdfd;
+  box-shadow: 2px 2px 2px -2px rgba(60, 60, 60, 0.8);
 }
 
-.form button {
-  width: 200px;
+.field select{
+  width: 50%;
+  padding: 10px;
+  background-color: #fdfdfd;
+  color: #666666;
+  box-shadow: 2px 2px 2px -2px rgba(60, 60, 60, 0.8);
+}
+
+button {
+  width: 100%;
   height: 60px;
-  background-color: #ff331b;
+  background-color: #1fa535;
+  color: #ffffff;
   font-size: 24px;
   margin-top: 50px;
+  border-radius: 8px;
+}
+
+.ad {
+  width: 200px;
+  height: 500px;
+  margin-top: 50px;
+  background-color: #361d1a;
+  display: flex;
+}
+
+p {
+  display: flex;
+  font-size: 64px;
+  text-align: center;
+  margin: auto;
+  color: #ffffff;
 }

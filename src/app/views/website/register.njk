@@ -1,37 +1,83 @@
 {% extends 'layout.njk' %}
 
-{% block content %}
+{% block aside %}
+    <div class="ad">
+        <p>GIBE MANEI PLS</p>
+    </div>
+{% endblock aside %}
 
-    <form action="">
-
-        <section class="form">
-            <div class="content">
-                <div class="item">
-                    <label for="">Nome do Estabelecimento:</label>
-                    <input type="text">
+{% block main %}
+    <div class="registerMain">
+        <form action="">
+            <legend>
+                <h1>Cadastro de estabelecimento</h1>
+            </legend>
+            <fieldset>
+                <h2>Dados do Estabelecimento</h2>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="">Nome do Estabelecimento:</label>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <label for="">Imagem do estabeleciento:</label>
+                        <input type="url" name="img_url">
+                    </div>
+                    <div class="field">
+                        <label for="">Telefone:</label>
+                        <input type="text">
+                    </div>
                 </div>
-                <div class="item">
-                    <label for="">Imagem do estabeleciento:</label>
-                    <input type="url" name="img_url">
-                </div>
-                <div class="item">
-                    <label for="">Telefone:</label>
-                    <input type="text">
-                </div>
-                <div class="item">
-                    <label for="">Endereço:</label>
-                    <input type="text">
-                </div>
-                <div class="item">
-                    <label for="">Tipo de estabelecimento:</label>
-                    <input type="text">
+
+                <div class="field-group addres">
+
+                    <h3>Endereço:
+                    </h3>
+                    <div class="field">
+                        <label for="">Rua:
+                        </label>
+                        <input type="text" name="street" placeholder="Rua"><br>
+                    </div>
+
+                    <div class="field">
+                        <label for="">N°: 
+                        </label>
+                        <input type="text" name="number" placeholder="N°"><br>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Bairro:
+                        </label>
+                        <input type="text" name="district" placeholder="Bairro"><br>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Cidade: </label>
+                        <select name="city" id=""><br>
+                            <option value="Queimadas">Queimadas</option>
+                        </select>
+                    </div>
+
                 </div>
 
-            </div>
-                <button type="submit">Cadastrar</button>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="">Tipo de estabelecimento:</label>
+                        <select name="" id="">
+                            <option value="">Pizzaria</option>
+                            <option value="">Restaurante</option>
+                            <option value="">Sorveteria</option>
+                            <option value="">Lanchonete</option>
+                            <option value="">Churrascaria</option>
+                            <option value="">Bar</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
 
-        </section>
+            <button type="submit">Cadastrar</button>
+        </form>
 
-    </form>
+    </div>
 
-{% endblock content %}
+{% endblock main %}
