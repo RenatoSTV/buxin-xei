@@ -1,5 +1,5 @@
 const spans = document.querySelectorAll('span');
-const options = document.querySelectorAll('li');
+const options = document.querySelectorAll('.categorie');
 
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener('mouseover', function () {

@@ -13,18 +13,25 @@
             <header class="header">
                 <div class="home">
                     <a href="/">
-                        <img src="/assets/pizza.svg" alt="buxinxei">
-                        <p>Buxin<br>Xei</p>
+                        <img src="/assets/buxin-xei-logo.png" alt="buxinxei">
                     </a>
                 </div>
-                <div class="links">
-                    <a href="/restaurantes">Restaurantes</a>
-                    <a href="/cadastrar">Cadastro</a>
-                    <a href="#">Fale conosco</a>
+
+                <div class="search">
+                    <input type="text" name="search" id="" autocomplete="off">
+                    <button class="searchBtn">
+                        <img src="assets/search.svg" alt="">
+                    </button>
                 </div>
-                <div class="login">
-                    <button>Login</button>
+                <div class="register-login">
+                    <div class="register">
+                        <a href="/register">Anuncie Já!</a>
+                    </div>
+                    <div class="login">
+                        <a href="/login">Login</a>
+                    </div>
                 </div>
+
             </header>
             <aside>
                 {% block aside %}{% endblock aside %}
@@ -33,9 +40,7 @@
                 {% block main %}{% endblock main %}
             </main>
         </div>
-        <footer>
-            <p>Todos os direitos reservados</p>
-        </footer>
+
         <script src="scripts/script.js"></script>
     </body>
 </html>

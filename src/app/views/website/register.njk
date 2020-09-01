@@ -1,14 +1,11 @@
 {% extends 'layout.njk' %}
 
 {% block aside %}
-    <div class="ad">
-        <p>GIBE MANEI PLS</p>
-    </div>
 {% endblock aside %}
 
 {% block main %}
     <div class="registerMain">
-        <form action="">
+        <form action="/register" method="post">
             <legend>
                 <h1>Cadastro de estabelecimento</h1>
             </legend>
@@ -21,7 +18,7 @@
                     </div>
                     <div class="field">
                         <label for="">Imagem do estabeleciento:</label>
-                        <input type="url" name="img_url">
+                        <input type="url" name="img_url" placeholder="Https://">
                     </div>
                     <div class="field">
                         <label for="">Telefone:</label>
@@ -46,12 +43,6 @@
                     </div>
 
                     <div class="field">
-                        <label for="">Bairro:
-                        </label>
-                        <input type="text" name="district" placeholder="Bairro"><br>
-                    </div>
-
-                    <div class="field">
                         <label for="">Cidade: </label>
                         <select name="city" id=""><br>
                             <option value="Queimadas">Queimadas</option>
@@ -64,18 +55,16 @@
                     <div class="field">
                         <label for="">Tipo de estabelecimento:</label>
                         <select name="" id="">
-                            <option value="">Pizzaria</option>
-                            <option value="">Restaurante</option>
-                            <option value="">Sorveteria</option>
-                            <option value="">Lanchonete</option>
-                            <option value="">Churrascaria</option>
-                            <option value="">Bar</option>
+                            <option value="">Selecione uma categoria</option>
+                            {% for category in categories %}
+                                <option value="{{category.id}}">{{category.name}}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
             </fieldset>
 
-            <button type="submit">Cadastrar</button>
+            <button class="button" type="submit">Cadastrar</button>
         </form>
 
     </div>
