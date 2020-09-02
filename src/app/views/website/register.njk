@@ -1,7 +1,6 @@
 {% extends 'layout.njk' %}
 
-{% block aside %}
-{% endblock aside %}
+{% block aside %}{% endblock aside %}
 
 {% block main %}
     <div class="registerMain">
@@ -13,37 +12,40 @@
                 <h2>Dados do Estabelecimento</h2>
                 <div class="field-group">
                     <div class="field">
-                        <label for="">Nome do Estabelecimento:</label>
-                        <input type="text">
+                        <label for="">Nome:
+                        </label>
+                        <input type="text" name="name" class="input">
                     </div>
                     <div class="field">
-                        <label for="">Imagem do estabeleciento:</label>
-                        <input type="url" name="img_url" placeholder="Https://">
+                        <label for="">Imagem:
+                        </label>
+                        <input type="url" name="image_url" placeholder="Https://" class="input">
                     </div>
                     <div class="field">
-                        <label for="">Telefone:</label>
-                        <input type="text">
+                        <label for="">Telefone:
+                        </label>
+                        <input type="number" name="phone" class="input">
                     </div>
                 </div>
 
-                <div class="field-group addres">
+                <div class="field-group address">
 
-                    <h3>Endereço:
-                    </h3>
+                    <h3>Endereço</h3>
                     <div class="field">
                         <label for="">Rua:
                         </label>
-                        <input type="text" name="street" placeholder="Rua"><br>
+                        <input type="text" name="street" placeholder="Rua" class="input"><br>
                     </div>
 
                     <div class="field">
-                        <label for="">N°: 
+                        <label for="">N°:
                         </label>
-                        <input type="text" name="number" placeholder="N°"><br>
+                        <input type="text" name="number" placeholder="N°" class="input"><br>
                     </div>
 
                     <div class="field">
-                        <label for="">Cidade: </label>
+                        <label for="">Cidade:
+                        </label>
                         <select name="city" id=""><br>
                             <option value="Queimadas">Queimadas</option>
                         </select>
@@ -52,14 +54,25 @@
                 </div>
 
                 <div class="field-group">
-                    <div class="field">
+                    <div class="field category">
                         <label for="">Tipo de estabelecimento:</label>
-                        <select name="" id="">
+                        <select name="category_id">
                             <option value="">Selecione uma categoria</option>
                             {% for category in categories %}
                                 <option value="{{category.id}}">{{category.name}}</option>
                             {% endfor %}
                         </select>
+                    </div>
+                    <div class="field delivery">
+                        <h2>Delivery?</h2>
+                        <div class="options">
+                            <input type="radio" name="delivery" value = true>
+                            <label for="true">Sim</label>
+
+                            <input type="radio" name="delivery" value = false>
+                            <label for="false">Não</label>
+                        </div>
+
                     </div>
                 </div>
             </fieldset>
