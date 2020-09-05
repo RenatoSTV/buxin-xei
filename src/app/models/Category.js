@@ -1,10 +1,9 @@
 const db = require('../../config/db')
 
 module.exports = {
-    all() {
-        return db.query(`
-            SELECT * FROM  categories
-        `)
+    async all() {
+        const results = await db.query(`SELECT * FROM  categories`)
+        return results.rows
     },
     async find(id) {
         const results = await db.query('SELECT * FROM categories WHERE id = $1', [id])  

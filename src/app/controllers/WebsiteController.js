@@ -6,12 +6,8 @@ module.exports = {
         try {
             const results = await Establishment.all()
             const establishments = results.rows
-            const categoryId = results.rows[0].category_id
-
-            const category = await Category.find(categoryId)
-            console.log(category)
-
-            return res.render("website/index", {establishments, category})
+            
+            return res.render("website/index", {establishments})
         } catch (error) {
             console.log(error)
         }

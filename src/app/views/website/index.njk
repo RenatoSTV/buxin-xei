@@ -3,44 +3,54 @@
 {% block aside %}
     <div class="indexAside">
         <div class="categories">
-            <div class="categorie">
+
+            <a href="/pizzarias" class="categorie">
                 <p>Pizzaria</p>
                 <span hidden="true">
                     <img src="assets/pizza.svg" alt="pizzaria">
                 </span>
-            </div>
-            <div class="categorie">
+            </a>
+
+            <a href="/restaurantes" class="categorie">
                 <p>Restaurante
                 </p>
                 <span hidden="true">
                     <img src="assets/restaurant.svg" alt="restaurante">
                 </span>
-            </div>
-            <div class="categorie">
+            </a>
+            <a href="/gelados" class="categorie">
                 <p>Sorveteria / Açaiteria</p>
                 <span hidden="true">
                     <img src="assets/ice-cream.svg" alt="sorveteria">
                 </span>
-            </div>
-            <div class="categorie">
+            </a>
+
+            <a href="/churrascarias" class="categorie">
                 <p>Churrascaria</p>
                 <span hidden="true">
                     <img src="assets/barbecue.svg" alt="churrascaria">
                 </span>
-            </div>
-            <div class="categorie">
+            </a>
+
+            <a href="/bares" class="categorie">
                 <p>Bar</p>
                 <span hidden="true">
                     <img src="assets/drinks.svg" alt="bar">
                 </span>
-            </div>
+            </a>
+            <a href="/lanchonetes" class="categorie">
+                <p>Lanchonete</p>
+                <span hidden="true">
+                    <img src="assets/lanchonete.svg" alt="lanchonete">
+                </span>
+            </a>
         </div>
     </div>
 {% endblock aside %}
 
 {% block main %}
     <div class="indexMain">
-        
+
         <div class="content">
             <div class="cards">
                 {% for establishment in establishments %}
@@ -50,7 +60,7 @@
                         </div>
                         <div class="infos">
                             <h2>{{establishment.name}}</h2>
-                            <p>{{category.name}}</p>
+                            <p>{{establishment.category_name}}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -59,3 +69,9 @@
     </div>
 
 {% endblock main %}
+
+{% block modal %}
+
+    <div class="modal"></div>
+
+{% endblock modal %}

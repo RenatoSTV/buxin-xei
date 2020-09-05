@@ -2,7 +2,12 @@ const db = require('../../config/db')
 
 module.exports = {
     async all(){
-        return db.query("SELECT * FROM establishments")
+        return db.query(`
+        SELECT establishments.*, categories.name AS category_name
+        FROM establishments
+        LEFT JOIN categories
+        ON (categories.id = establishments.category_id)
+        `)
     },
     async post(data, address_id) {
         console.log(data)
